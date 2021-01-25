@@ -26,7 +26,7 @@ function App() {
         <ListTimers />
         <p className="Created">
           Created by
-          <a href="linkedin.com/in/renat-kostiakov-2456241a8">
+          <a href="https://www.linkedin.com/in/renat-kostiakov-2456241a8">
             Renat Kostiakov
           </a>
         </p>
