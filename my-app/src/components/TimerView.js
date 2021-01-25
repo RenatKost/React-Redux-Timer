@@ -1,13 +1,13 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-// Import our toggleTimer action
+
 import { toggleTimer } from '../actions';
 import { resetTimer } from '../actions';
+import { waitTimer } from '../actions';
 import './TimerView.css';
 import { formatTime } from '../utils';
 
 export default function TimerView(props) {
-  // Extract these specific props to use in the component
   const { index, timer } = props;
   const dispatch = useDispatch();
 
@@ -19,6 +19,7 @@ export default function TimerView(props) {
         {timer.isRunning ? 'Stop' : 'Start'}
       </button>
       <button onClick={() => dispatch(resetTimer(index))}>{'Reset'}</button>
+      <button onClick={() => dispatch(waitTimer(index))}>{'Wait'}</button>
     </div>
   );
 }

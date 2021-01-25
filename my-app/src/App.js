@@ -21,9 +21,15 @@ function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>TMRZ</h1>
+        <h1>Create a Timer Name</h1>
         <NewTimer />
         <ListTimers />
+        <h1 className="Created">
+          Created by{' '}
+          <a href="linkedin.com/in/renat-kostiakov-2456241a8">
+            Renat Kostiakov
+          </a>
+        </h1>
       </div>
     </Provider>
   );

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './NewTimer.css';
 
-// We need to import our action to add a new timer
 import { addTimer } from '../actions';
 
 export default function NewTimer() {

@@ -38,3 +38,10 @@ export const resetTimer = index => {
     payload: { index },
   };
 };
+export const WAIT_TIMER = 'WAIT_TIMER';
+export const waitTimer = index => {
+  return {
+    type: WAIT_TIMER,
+    payload: { index },
+  };
+};
