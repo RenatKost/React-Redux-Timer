@@ -30,3 +30,11 @@ export const update = deltaTime => {
     payload: { deltaTime },
   };
 };
+
+export const RESET_TIMER = 'RESET_TIMER';
+export const resetTimer = index => {
+  return {
+    type: RESET_TIMER,
+    payload: { index },
+  };
+};

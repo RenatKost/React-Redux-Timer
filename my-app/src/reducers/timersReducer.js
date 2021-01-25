@@ -1,5 +1,5 @@
 // Import all of our actions
-import { NEW_TIMER, TOGGLE_TIMER, UPDATE } from '../actions';
+import { NEW_TIMER, TOGGLE_TIMER, UPDATE, RESET_TIMER } from '../actions';
 import Timer from '../Timer';
 
 const timersReducer = (state = [], action) => {
@@ -28,6 +28,16 @@ const timersReducer = (state = [], action) => {
         }
         return timer;
       });
+
+    case RESET_TIMER:
+      // Invert the isRunning property of timer at index, return a copy of state
+      const resState = state.map((timer, index) => {
+        if (action.payload.index === index) {
+          return { ...timer, time: 0 };
+        }
+        return timer;
+      });
+      return resState;
 
     default:
       return state;
