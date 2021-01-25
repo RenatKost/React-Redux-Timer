@@ -24,12 +24,12 @@ function App() {
         <h1>Create a Timer Name</h1>
         <NewTimer />
         <ListTimers />
-        <h1 className="Created">
-          Created by{' '}
+        <p className="Created">
+          Created by
           <a href="linkedin.com/in/renat-kostiakov-2456241a8">
             Renat Kostiakov
           </a>
-        </h1>
+        </p>
       </div>
     </Provider>
   );
